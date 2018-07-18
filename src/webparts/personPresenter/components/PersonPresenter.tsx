@@ -6,7 +6,9 @@ import { escape } from '@microsoft/sp-lodash-subset';
 export default class PersonPresenter extends React.Component<IPersonPresenterProps, {}> {
   public render(): React.ReactElement<IPersonPresenterProps> {
     return (
-      {this.props.description}
+      <div>
+        {this.props.description}
+      </div>
     );
   }
 }

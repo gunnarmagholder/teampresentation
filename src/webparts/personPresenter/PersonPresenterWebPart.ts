@@ -48,7 +48,8 @@ export default class PersonPresenterWebPart extends BaseClientSideWebPart<IPerso
               groupName: strings.BasicGroupName,
               groupFields: [
                 PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                  label: strings.DescriptionFieldLabel,
+                  multiline: true
                 })
               ]
             }

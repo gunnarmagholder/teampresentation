@@ -7,7 +7,8 @@ export default class PersonPresenter extends React.Component<IPersonPresenterPro
   public render(): React.ReactElement<IPersonPresenterProps> {
     return (
       <div>
-        {this.props.description}
+        <h1>{this.props.person}</h1>
+        <p>{this.props.description}</p> 
       </div>
     );
   }

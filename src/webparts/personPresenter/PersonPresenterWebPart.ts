@@ -13,6 +13,7 @@ import { IPersonPresenterProps } from './components/IPersonPresenterProps';
 
 export interface IPersonPresenterWebPartProps {
   description: string;
+  person: string;
 }
 
 export default class PersonPresenterWebPart extends BaseClientSideWebPart<IPersonPresenterWebPartProps> {
@@ -21,7 +22,8 @@ export default class PersonPresenterWebPart extends BaseClientSideWebPart<IPerso
     const element: React.ReactElement<IPersonPresenterProps > = React.createElement(
       PersonPresenter,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        person: this.properties.person
       }
     );
 
@@ -47,6 +49,10 @@ export default class PersonPresenterWebPart extends BaseClientSideWebPart<IPerso
             {
               groupName: strings.BasicGroupName,
               groupFields: [
+                PropertyPaneTextField('person', {
+                  label: strings.DescriptionFieldLabel,
+                  multiline: false
+                }),
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel,
                   multiline: true

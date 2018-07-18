@@ -20,7 +20,8 @@
     "description": { "default": "Presents a single person from a team" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "PersonPresenter"
+      "description": "PersonPresenter",
+      "person": "PersonPresenter"
     }
   }]
 }

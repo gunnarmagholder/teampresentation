@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/personPresenter/PersonPresenterWebPart.js",
+      "manifest": "./src/webparts/personPresenter/PersonPresenterWebPart.manifest.json",
+      "outputPath": "./dist/person-presenter-web-part.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "PersonPresenterWebPartStrings": "webparts/personPresenter/loc/{locale}.js"
+  }
+}

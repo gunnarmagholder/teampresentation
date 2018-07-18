@@ -8,6 +8,7 @@
   ],
   "externals": {},
   "localizedResources": {
-    "PersonPresenterWebPartStrings": "webparts/personPresenter/loc/{locale}.js"
+    "PersonPresenterWebPartStrings": "webparts/personPresenter/loc/{locale}.js",
+    "PropertyControlStrings": "../node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

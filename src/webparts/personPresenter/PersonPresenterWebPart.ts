@@ -10,10 +10,11 @@ import {
 import * as strings from 'PersonPresenterWebPartStrings';
 import PersonPresenter from './components/PersonPresenter';
 import { IPersonPresenterProps } from './components/IPersonPresenterProps';
+import { IPropertyFieldGroupOrPerson } from "@pnp/spfx-property-controls/lib/PropertyFieldPeoplePicker";
 
 export interface IPersonPresenterWebPartProps {
   description: string;
-  person: string;
+  person: IPropertyFieldGroupOrPerson[];
 }
 
 export default class PersonPresenterWebPart extends BaseClientSideWebPart<IPersonPresenterWebPartProps> {

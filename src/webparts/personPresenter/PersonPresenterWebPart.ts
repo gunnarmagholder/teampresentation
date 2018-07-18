@@ -10,6 +10,7 @@ import {
 import * as strings from 'PersonPresenterWebPartStrings';
 import PersonPresenter from './components/PersonPresenter';
 import { IPersonPresenterProps } from './components/IPersonPresenterProps';
+import { PropertyFieldPeoplePicker, PrincipalType } from '@pnp/spfx-property-controls/lib/PropertyFieldPeoplePicker';
 import { IPropertyFieldGroupOrPerson } from "@pnp/spfx-property-controls/lib/PropertyFieldPeoplePicker";
 
 export interface IPersonPresenterWebPartProps {
@@ -50,9 +51,17 @@ export default class PersonPresenterWebPart extends BaseClientSideWebPart<IPerso
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('person', {
-                  label: strings.DescriptionFieldLabel,
-                  multiline: false
+                PropertyFieldPeoplePicker('person', {
+                  label: 'PropertyFieldPeoplePicker',
+                  initialData: this.properties.person,
+                  allowDuplicate: false,
+                  principalType: [PrincipalType.Users, PrincipalType.SharePoint, PrincipalType.Security],
+                  onPropertyChange: this.onPropertyPaneFieldChanged,
+                  context: this.context,
+                  properties: this.properties,
+                  onGetErrorMessage: null,
+                  deferredValidationTime: 0,
+                  key: 'peopleFieldId'
                 }),
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel,
